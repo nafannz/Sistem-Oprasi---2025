@@ -1,6 +1,8 @@
 Laporan Praktikum
 Sistem Oprasi
- 
+
+![Image](https://github.com/user-attachments/assets/838b068c-4d85-452a-aca6-352d279fbd3f)
+
 Dosen Pengampu :
  Dr Ferry Astika Saputra ST, M.Sc
 
