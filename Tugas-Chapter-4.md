@@ -24,9 +24,7 @@ Ketika ukuran bagian array yang akan dihitung lebih kecil dari ambang batas (THR
 Code :
 /**
  * Fork/join parallelism in Java
- *
  * Figure 4.18
- *
  * @author Gagne, Galvin, Silberschatz
  * Operating System Concepts  - Tenth Edition
  * Copyright John Wiley & Sons - 2018
