@@ -12,6 +12,9 @@ Politeknik Elektronika Negeri Surabaya (PENS) LA 2025
 Analisa code program algrotima schedulling
 
 code 1 SJF without arrival time (non-preemptive) :
+
+```c
+
 #include<stdio.h>
 struct proc
 {
@@ -58,6 +61,8 @@ int main()
     printf("\nAverage TurnAroundTime=%f\nAverage WaitingTime=%f",avgtat,avgwt);
 }
 
+```
+
 Analaisa :
 Alur Program
 Input jumlah proses (n)
@@ -100,6 +105,7 @@ Kesimpulan
 
 Code 2 SJF with arrival time (non-prremptive) :
 
+```c
 #include<stdio.h>
 struct proc
 {
@@ -168,7 +174,7 @@ int main()
     avgtat/=n,avgwt/=n;
     printf("\nAverage TurnAroundTime=%f\nAverage WaitingTime=%f",avgtat,avgwt);
 }
-
+```
 Analisa :
 - Mempertimbangkan waktu kedatangan (arrival time)
 - Proses dengan burst time terkecil di antara proses yang sudah datang akan dipilih
@@ -209,6 +215,7 @@ Kesimpulan
 
 Code 3 SRTF (preemptive) :
 
+```c
 #include<stdio.h>
 #define MAX 9999
 struct proc
@@ -268,7 +275,7 @@ int main()
     avgtat/=n,avgwt/=n;
     printf("\nAverage TurnAroundTime=%f\nAverage WaitingTime=%f",avgtat,avgwt);
 }
-
+```
 Analisis Program: SRTF (Preemptive)
 - Proses dengan remaining burst time terkecil akan dieksekusi terlebih dahulu.
 - Jika ada proses baru yang datang dengan burst time lebih kecil dari proses yang sedang berjalan, maka preemption terjadi (proses diganti).
