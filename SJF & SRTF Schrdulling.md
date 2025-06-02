@@ -73,7 +73,7 @@ CT (Completion Time)
 TAT (Turn Around Time) = CT
 WT (Waiting Time) = TAT - Burst Time
 Cetak hasil dan hitung rata-rata TAT dan WT
-
+```
 input :
 P1 = 6
 P2 = 8
@@ -85,18 +85,31 @@ P4 = 3
 P1 = 6
 P3 = 7
 P2 = 8
-
+```
 Perhitungan SJF
+```
 Process	BT	CT	TAT	WT
-P4	    3	  3	  3	  0
-P1	    6	  9	  9	  3
-P3	    7  	16	16	9
-P2	    8  	24	24	16
+P4	3	3	3	0
+P1	6	9	9	3
+P3	7  	16	16	9
+P2	8  	24	24	16
 
-Chart (SJF Scheduling Chart)
-|  P4  |   P1   |   P3   |   P2   |
-0      3        9        16       24
+```
 
+```mermaid
+
+gantt
+    title SJF Scheduling Gantt Chart
+    dateFormat  HH:mm
+    axisFormat %H:%M
+    section Proses
+    P4 :active, p4, 00:00, 3m
+    P1 :active, p1, 00:03, 6m
+    P3 :active, p3, 00:09, 7m
+    P2 :active, p2, 00:16, 8m
+
+
+```
 Kesimpulan
 - SJF sangat optimal jika semua proses sudah diketahui burst time-nya dan datang bersamaan.
 - Memberikan rata-rata waktu tunggu (waiting time) yang lebih kecil dibanding algoritma lainnya seperti FCFS.
@@ -180,34 +193,46 @@ Analisa :
 - Proses dengan burst time terkecil di antara proses yang sudah datang akan dipilih
 - Proses tidak diganggu (non-preemptive) setelah dimulai
 
+```
 Input :
 Proses	Arrival Time (AT)	Burst Time (BT)
 P1	    0	                7
 P2	    2	                4
 P3	    4	                1
 P4	    5	                4
-
+```
 Langkah Penjadwalan (SJF Non-Preemptive)
 Waktu 0 → P1 saja yang datang → pilih P1
 Waktu 7 → P2, P3, P4 sudah datang → pilih P3 (BT terkecil)
 Waktu 8 → sisa P2 dan P4 → pilih P2
 Waktu 12 → tinggal P4 → pilih P4
 
+```
 Perhitungan
 Process	AT	BT	CT	TAT = CT - AT	WT = TAT - BT
-P1	    0	  7	  7	  7	            0
-P3	    4	  1	  8	  4	            3
-P2	    2	  4	  12	10	          6
-P4	    5	  4	  16	11	          7
-
+P1	0	7	7	 7	        0
+P3	4	1	8	 4	        3
+P2	2	4	12	 10	        6
+P4	5	4	16	 11	        7
+```
 Rata-Rata
 Average TAT = (7 + 4 + 10 + 11) / 4 = 8.0
 Average WT = (0 + 3 + 6 + 7) / 4 = 4.0
 
-Chart :
-|   P1   | P3 |   P2   |   P4   |
-0       7    8        12       16
+```mermaid
 
+gantt
+    title SJF Non-Preemptive Scheduling Gantt Chart
+    dateFormat  HH:mm
+    axisFormat %H:%M
+    section Proses
+    P1 :active, p1, 00:00, 7m
+    P3 :active, p3, 00:07, 1m
+    P2 :active, p2, 00:08, 4m
+    P4 :active, p4, 00:12, 4m
+
+
+```
 Kesimpulan
 - Algoritma SJF dengan Arrival Time lebih adil karena mempertimbangkan waktu kedatangan.
 - Lebih kompleks dari SJF tanpa arrival karena proses harus dipilih dari yang sudah datang saja.
@@ -281,34 +306,49 @@ Analisis Program: SRTF (Preemptive)
 - Jika ada proses baru yang datang dengan burst time lebih kecil dari proses yang sedang berjalan, maka preemption terjadi (proses diganti).
 - Digunakan untuk sistem real-time, lebih adil terhadap proses kecil yang datang belakangan.
 
+```
 Input :
 Process	Arrival Time (AT)	Burst Time (BT)
 P1	    0	                7
 P2	    2	                4
 P3	    4	                1
 P4	    5	                4
-
+```
 Simulasi Waktu Eksekusi (Timeline)
 Gantt Chart (setiap satuan waktu):
 
+```
 Time: 0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
        P1  P1  P2  P2  P3  P2  P2  P4  P4  P4  P4  P1  P1  P1  P1  P1
-
+```
+```
 Hasil Akhir Per Proses :
 Process	AT	BT	CT	TAT = CT - AT	WT = TAT - BT
-P1	    0	  7	  16	16	          9
-P2	    2	  4	  7	  5	            1
-P3	    4	  1	  5	  1	            0
-P4	    5	  4	  11	6	            2
-
+P1	0	7	16	16	        9
+P2	2	 4	7	5	        1
+P3	4	 1	5	1	        0
+P4	5	 4	11	6	        2
+```
 Rata-Rata :
 Average TAT = (16 + 5 + 1 + 6) / 4 = 7.0
 Average WT = (9 + 1 + 0 + 2) / 4 = 3.0
 
-Chart :
-| P1 | P2 | P3 | P2 | P4 | P1 |
-0    2    4    5    7    11   16
+```mermaid
 
+gantt
+    title SJF Preemptive Scheduling Gantt Chart
+    dateFormat  HH:mm
+    axisFormat %H:%M
+    section Proses
+    P1 :active, p1, 00:00, 2m
+    P2 :active, p2, 00:02, 2m
+    P3 :active, p3, 00:04, 1m
+    P2 :active, p2b, 00:05, 2m
+    P4 :active, p4, 00:07, 4m
+    P1 :active, p1b, 00:11, 5m
+
+ 
+```
 Kesimpulan
 - SRTF mengurangi waktu tunggu rata-rata dibanding SJF Non-Preemptive.
 - Cocok untuk sistem yang butuh respons cepat terhadap proses kecil.
