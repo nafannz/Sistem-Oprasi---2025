@@ -147,4 +147,6 @@ gantt
 | Context Switches     | 7              | **8**              |
 ```
 
- 
+![Diargram](https://github.com/user-attachments/assets/3be57950-dc60-4b63-889b-ff3e83085dad)
+
+
