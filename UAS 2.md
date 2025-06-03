@@ -35,7 +35,8 @@
 
 ###  Gambar Penjadwalan CPU:
 
-![Scheduler Diagram](https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Process_Scheduling_in_Operating_System.svg/1280px-Process_Scheduling_in_Operating_System.svg.png)
+ ![WhatsApp Image 2025-06-03 at 14 32 27](https://github.com/user-attachments/assets/82620ec5-57a9-4a95-9a05-ed41f8ee6b8c)
+
 
 
 
