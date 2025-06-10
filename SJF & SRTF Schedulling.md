@@ -1,3 +1,4 @@
+<div align="center">
 Laporan Praktikum Sistem Oprasi
 
 ![Image](https://github.com/user-attachments/assets/838b068c-4d85-452a-aca6-352d279fbd3f)
@@ -7,7 +8,7 @@ Dosen Pengampu : Dr Ferry Astika Saputra ST, M.Sc
 Oleh : Naf’an Nashohu Zayyan 3124521008 D3 IT A
 
 Politeknik Elektronika Negeri Surabaya (PENS) LA 2025
-
+</div>
 
 Analisa code program algrotima schedulling
 
