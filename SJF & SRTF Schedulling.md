@@ -337,7 +337,7 @@ Average WT = (9 + 1 + 0 + 2) / 4 = 3.0
 ```mermaid
 
 gantt
-    title SJF Preemptive Scheduling Gantt Chart
+    title SRTF Preemptive Scheduling Gantt Chart
     dateFormat  HH:mm
     axisFormat %H:%M
     section Proses
